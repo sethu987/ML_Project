@@ -1,0 +1,138 @@
+{
+  "model_name": "repair_cost",
+  "selected_estimator": "RandomForest",
+  "model_type": "RandomForestRegressor",
+  "source_dataset": "enhanced_motor_vehicle_repair_towing_dataset.csv",
+  "target_column": "Total Cost",
+  "cost_units": "Source dataset units; currency is not stated in the CSV.",
+  "input_features": [
+    "Vehicle Type",
+    "Make and Model",
+    "Service Type",
+    "Urgency Level",
+    "Customer Type",
+    "Insurance Claim Used",
+    "Is Warranty Valid",
+    "Mileage at Service"
+  ],
+  "numeric_features": [
+    "Mileage at Service"
+  ],
+  "categorical_features": [
+    "Vehicle Type",
+    "Make and Model",
+    "Service Type",
+    "Urgency Level",
+    "Customer Type",
+    "Insurance Claim Used",
+    "Is Warranty Valid"
+  ],
+  "feature_selection_notes": "Use vehicle, service type, urgency, customer/insurance/warranty context, and mileage available at request time. Exclude identifiers, Estimated Cost as a target proxy, and fields describing completed work.",
+  "excluded_features": [
+    "Service ID",
+    "Customer Name",
+    "Service Description",
+    "Repair Date",
+    "Towing Date",
+    "Tow Location",
+    "Drop-off Location",
+    "Mechanic Name",
+    "Tow Truck Driver",
+    "Parts Used",
+    "Payment Method",
+    "Warranty Information",
+    "Service Status",
+    "Customer Feedback",
+    "Follow-up Needed",
+    "Service Duration Hours",
+    "Estimated Cost",
+    "Technician Rating",
+    "Tow Distance Miles"
+  ],
+  "training_samples": 1600000,
+  "testing_samples": 400000,
+  "usable_samples": 2000000,
+  "random_seed": 42,
+  "training_date_utc": "2026-10-26T12:45:06.282088+00:00",
+  "selected_hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 16,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 5,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 80,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "cross_validation": {
+    "DecisionTree": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 25000,
+      "training_data_only": true,
+      "fold_scores": [
+        -90.1900305920357,
+        -91.51768921816961,
+        -94.27740929110585
+      ],
+      "mean_score": -91.99504303377039,
+      "standard_deviation": 1.7024621692036859
+    },
+    "RandomForest": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 25000,
+      "training_data_only": true,
+      "fold_scores": [
+        -88.07395110691027,
+        -89.07341684367218,
+        -90.60262733236033
+      ],
+      "mean_score": -89.2499984276476,
+      "standard_deviation": 1.0398514814268864
+    }
+  },
+  "test_metrics_by_model": {
+    "DecisionTree": {
+      "mae": 89.94146957592748,
+      "mse": 25534.666098901263,
+      "rmse": 159.79570112772515,
+      "r2": 0.8462437453267582
+    },
+    "RandomForest": {
+      "mae": 89.68208197534665,
+      "mse": 25334.200469961223,
+      "rmse": 159.16720915427658,
+      "r2": 0.8474508433235423
+    }
+  },
+  "selected_test_metrics": {
+    "mae": 89.68208197534665,
+    "mse": 25334.200469961223,
+    "rmse": 159.16720915427658,
+    "r2": 0.8474508433235423
+  },
+  "classification_report": null,
+  "classification_reports_by_model": {},
+  "majority_baseline_metrics": null,
+  "class_names": null,
+  "split_note": null,
+  "cost_unit_limitation": "The CSV does not document currency; results remain in source dataset units.",
+  "limitations": [
+    "Random holdout may share vehicle or customer characteristics across partitions.",
+    "Tree feature importance indicates model reliance, not causation.",
+    "Cost currency is not documented in either source dataset.",
+    "Repair Service Status is overwhelmingly 's' with one 'In Progress' row; verify source encoding."
+  ],
+  "supported_vehicle_combinations": []
+}

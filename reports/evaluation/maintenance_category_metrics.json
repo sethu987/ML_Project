@@ -1,0 +1,172 @@
+{
+  "model_name": "maintenance_category",
+  "selected_estimator": "RandomForest",
+  "cross_validation": {
+    "DecisionTree": {
+      "scoring": "f1_macro",
+      "folds": 3,
+      "rows_used": 100000,
+      "training_data_only": true,
+      "fold_scores": [
+        0.19620246355333326,
+        0.22511420316149108,
+        0.25479786069449534
+      ],
+      "mean_score": 0.22537150913643988,
+      "standard_deviation": 0.023922162615535474
+    },
+    "RandomForest": {
+      "scoring": "f1_macro",
+      "folds": 3,
+      "rows_used": 100000,
+      "training_data_only": true,
+      "fold_scores": [
+        0.284414286874935,
+        0.28346949449857745,
+        0.2837053588990121
+      ],
+      "mean_score": 0.28386304675750823,
+      "standard_deviation": 0.00040150322052974344
+    }
+  },
+  "test_metrics_by_model": {
+    "DecisionTree": {
+      "accuracy": 0.2857625,
+      "precision_macro": 0.2839244952192686,
+      "recall_macro": 0.28560714408691873,
+      "macro_f1": 0.23583869635648452,
+      "weighted_f1": 0.23593782427951815
+    },
+    "RandomForest": {
+      "accuracy": 0.28523,
+      "precision_macro": 0.28515350868860373,
+      "recall_macro": 0.28518499261522434,
+      "macro_f1": 0.28453718005716006,
+      "weighted_f1": 0.2845663932716358
+    }
+  },
+  "selected_test_metrics": {
+    "accuracy": 0.28523,
+    "precision_macro": 0.28515350868860373,
+    "recall_macro": 0.28518499261522434,
+    "macro_f1": 0.28453718005716006,
+    "weighted_f1": 0.2845663932716358
+  },
+  "classification_report": "                     precision    recall  f1-score   support\n\nBattery Replacement       0.17      0.16      0.17     57185\n      Brake Service       0.17      0.13      0.14     56913\n      Engine Repair       0.17      0.17      0.17     57186\n         Oil Change       0.17      0.20      0.18     57263\n   Tire Replacement       0.16      0.17      0.17     57167\n             Towing       1.00      1.00      1.00     57148\nTransmission Repair       0.16      0.16      0.16     57138\n\n           accuracy                           0.29    400000\n          macro avg       0.29      0.29      0.28    400000\n       weighted avg       0.29      0.29      0.28    400000\n",
+  "classification_reports_by_model": {
+    "DecisionTree": {
+      "Battery Replacement": {
+        "precision": 0.16361707769822328,
+        "recall": 0.010789542712249715,
+        "f1-score": 0.02024411050593871,
+        "support": 57185.0
+      },
+      "Brake Service": {
+        "precision": 0.16410510659395142,
+        "recall": 0.011631788870732521,
+        "f1-score": 0.02172379280358344,
+        "support": 56913.0
+      },
+      "Engine Repair": {
+        "precision": 0.1657133331745767,
+        "recall": 0.6084356310985206,
+        "f1-score": 0.2604818997495798,
+        "support": 57186.0
+      },
+      "Oil Change": {
+        "precision": 0.16836710978897462,
+        "recall": 0.2530255138571154,
+        "f1-score": 0.20219231225448125,
+        "support": 57263.0
+      },
+      "Tire Replacement": {
+        "precision": 0.16999118360149879,
+        "recall": 0.10792939982857243,
+        "f1-score": 0.13203085713062923,
+        "support": 57167.0
+      },
+      "Towing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 57148.0
+      },
+      "Transmission Repair": {
+        "precision": 0.15567765567765568,
+        "recall": 0.007438132241240505,
+        "f1-score": 0.01419790205117926,
+        "support": 57138.0
+      },
+      "accuracy": 0.2857625,
+      "macro avg": {
+        "precision": 0.2839244952192686,
+        "recall": 0.28560714408691873,
+        "f1-score": 0.23583869635648452,
+        "support": 400000.0
+      },
+      "weighted avg": {
+        "precision": 0.2839371022039466,
+        "recall": 0.2857625,
+        "f1-score": 0.23593782427951815,
+        "support": 400000.0
+      }
+    },
+    "RandomForest": {
+      "Battery Replacement": {
+        "precision": 0.1669197106367777,
+        "recall": 0.16341697997726676,
+        "f1-score": 0.16514977467526729,
+        "support": 57185.0
+      },
+      "Brake Service": {
+        "precision": 0.16606729734063266,
+        "recall": 0.12738741588037883,
+        "f1-score": 0.1441781843492095,
+        "support": 56913.0
+      },
+      "Engine Repair": {
+        "precision": 0.1663839603758863,
+        "recall": 0.17152799636274613,
+        "f1-score": 0.16891682452212847,
+        "support": 57186.0
+      },
+      "Oil Change": {
+        "precision": 0.16870921534298902,
+        "recall": 0.20362188498681522,
+        "f1-score": 0.18452870798252832,
+        "support": 57263.0
+      },
+      "Tire Replacement": {
+        "precision": 0.16341366261700857,
+        "recall": 0.17223223188202985,
+        "f1-score": 0.1677071002137644,
+        "support": 57167.0
+      },
+      "Towing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 57148.0
+      },
+      "Transmission Repair": {
+        "precision": 0.16458071450693193,
+        "recall": 0.15810843921733347,
+        "f1-score": 0.16127966865722268,
+        "support": 57138.0
+      },
+      "accuracy": 0.28523,
+      "macro avg": {
+        "precision": 0.28515350868860373,
+        "recall": 0.28518499261522434,
+        "f1-score": 0.28453718005716006,
+        "support": 400000.0
+      },
+      "weighted avg": {
+        "precision": 0.2851650060471905,
+        "recall": 0.28523,
+        "f1-score": 0.2845663932716358,
+        "support": 400000.0
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10243a">
+  <meta name="referrer" content="no-referrer">
+  <title>Sign in — AutoCare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js?v=3" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-main">
+      <div class="auth-card">
+        <a class="brand auth-brand" href="auth.html" aria-label="AutoCare home">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.5 7.2 7h9.6l2.2 6.5M4.5 13.5h15v5h-15zM7 18.5v2m10-2v2"/></svg></span>
+          <span>auto<span class="brand-light">care</span></span>
+        </a>
+        <h1 id="auth-title">Welcome back<span class="title-period">.</span></h1>
+        <p class="auth-subtitle" id="auth-subtitle">Sign in to continue to your dashboard.</p>
+        <div class="auth-message" id="auth-message" role="status" aria-live="polite" hidden></div>
+        <form id="login-panel" class="auth-form">
+          <label class="field">Email address<input name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field">Password<input name="password" type="password" required maxlength="72" autocomplete="current-password" placeholder="Your password"></label>
+          <button class="button button-primary auth-submit" type="submit">Sign in to AutoCare <span>→</span></button>
+          <p class="auth-switch-copy">New to AutoCare? <button type="button" data-show-register>Create an account</button></p>
+          <p class="auth-security-note"><span>✓</span> Your account is protected with a private, expiring session.</p>
+        </form>
+        <form id="register-panel" class="auth-form" hidden>
+          <label class="field">Full name<input name="full_name" type="text" required minlength="1" maxlength="80" autocomplete="name" placeholder="Your name"></label>
+          <label class="field">Email address<input name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field">Password<input name="password" type="password" required minlength="12" maxlength="72" autocomplete="new-password" placeholder="At least 12 characters"></label>
+          <label class="field">Confirm password<input name="confirm_password" type="password" required minlength="12" maxlength="72" autocomplete="new-password" placeholder="Enter your password again"></label>
+          <p class="auth-password-note">Use at least 12 characters. Passwords are securely hashed and never stored in plain text.</p>
+          <button class="button button-primary auth-submit" type="submit">Create your account <span>→</span></button>
+          <p class="auth-switch-copy">Already have an account? <button type="button" data-show-login>Sign in</button></p>
+          <p class="auth-security-note"><span>✓</span> Your account is protected with a private, expiring session.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

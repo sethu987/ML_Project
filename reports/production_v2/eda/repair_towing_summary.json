@@ -1,0 +1,360 @@
+{
+  "rows": 2000000,
+  "columns": 28,
+  "numeric_columns": [
+    "Service ID",
+    "Total Cost",
+    "Customer Feedback",
+    "Service Duration Hours",
+    "Estimated Cost",
+    "Mileage at Service",
+    "Technician Rating",
+    "Tow Distance Miles"
+  ],
+  "categorical_columns": [
+    "Customer Name",
+    "Vehicle Type",
+    "Make and Model",
+    "Service Type",
+    "Service Description",
+    "Repair Date",
+    "Towing Date",
+    "Tow Location",
+    "Drop-off Location",
+    "Mechanic Name",
+    "Tow Truck Driver",
+    "Parts Used",
+    "Payment Method",
+    "Warranty Information",
+    "Service Status",
+    "Follow-up Needed",
+    "Urgency Level",
+    "Customer Type",
+    "Insurance Claim Used",
+    "Is Warranty Valid"
+  ],
+  "exact_duplicate_rows": 0,
+  "missing_values": {
+    "Towing Date": {
+      "count": 1714262,
+      "percent": 85.71
+    },
+    "Tow Location": {
+      "count": 1714262,
+      "percent": 85.71
+    },
+    "Drop-off Location": {
+      "count": 1714262,
+      "percent": 85.71
+    },
+    "Tow Truck Driver": {
+      "count": 1714262,
+      "percent": 85.71
+    },
+    "Customer Feedback": {
+      "count": 2000000,
+      "percent": 100.0
+    }
+  },
+  "categorical_values": {
+    "Customer Name": {
+      "Sarah Smith": 31641,
+      "James Johnson": 31635,
+      "Laura Johnson": 31622,
+      "Sarah Miller": 31600,
+      "James Smith": 31540,
+      "Michael Williams": 31532,
+      "James Brown": 31528,
+      "Laura Williams": 31483,
+      "David Garcia": 31455,
+      "David Brown": 31438,
+      "Michael Davis": 31436,
+      "James Garcia": 31430,
+      "John Williams": 31395,
+      "Kimberly Brown": 31373,
+      "Kimberly Garcia": 31358,
+      "Sarah Williams": 31354,
+      "John Brown": 31350,
+      "John Johnson": 31345,
+      "Michael Brown": 31343,
+      "James Jones": 31333
+    },
+    "Vehicle Type": {
+      "Van": 334078,
+      "SUV": 333522,
+      "Bus": 333269,
+      "Truck": 333230,
+      "Car": 332956,
+      "Motorcycle": 332945
+    },
+    "Make and Model": {
+      "Toyota Coach": 21083,
+      "Toyota School Bus": 21067,
+      "Harley-Davidson Coach": 21055,
+      "Yamaha Coach": 20921,
+      "Yamaha School Bus": 20890,
+      "Chevrolet School Bus": 20879,
+      "Chevrolet Coach": 20857,
+      "BMW Coach": 20798,
+      "Dodge Coach": 20794,
+      "Honda Coach": 20790,
+      "BMW School Bus": 20787,
+      "Ford School Bus": 20774,
+      "Harley-Davidson School Bus": 20768,
+      "Dodge School Bus": 20669,
+      "Ford Coach": 20574,
+      "Honda School Bus": 20563,
+      "Harley-Davidson Transit": 14144,
+      "Chevrolet Sienna": 14134,
+      "Chevrolet Transit": 14133,
+      "Chevrolet Odyssey": 14101
+    },
+    "Service Type": {
+      "Oil Change": 286316,
+      "Engine Repair": 285929,
+      "Battery Replacement": 285923,
+      "Tire Replacement": 285837,
+      "Towing": 285738,
+      "Transmission Repair": 285692,
+      "Brake Service": 284565
+    },
+    "Service Description": {
+      "Diagnosed and repaired no parts used.": 285738,
+      "Diagnosed and repaired Oil Filter.": 95700,
+      "Diagnosed and repaired Synthetic Oil.": 95633,
+      "Diagnosed and repaired Battery.": 95626,
+      "Diagnosed and repaired Transmission Fluid.": 95406,
+      "Diagnosed and repaired Clutch Kit.": 95379,
+      "Diagnosed and repaired Battery Terminal.": 95324,
+      "Diagnosed and repaired Oil Drain Plug.": 94983,
+      "Diagnosed and repaired Battery Holder.": 94973,
+      "Diagnosed and repaired Gearbox Seal.": 94907,
+      "Diagnosed and repaired Oil Pump.": 71688,
+      "Diagnosed and repaired Rim.": 71603,
+      "Diagnosed and repaired TPMS Sensor.": 71521,
+      "Diagnosed and repaired Valve Stem.": 71490,
+      "Diagnosed and repaired Timing Belt.": 71478,
+      "Diagnosed and repaired Spark Plugs.": 71450,
+      "Diagnosed and repaired Engine Mount.": 71313,
+      "Diagnosed and repaired Rotors.": 71312,
+      "Diagnosed and repaired Tire.": 71223,
+      "Diagnosed and repaired Calipers.": 71211
+    },
+    "Repair Date": {
+      "2022-05-28": 1208,
+      "2023-07-20": 1196,
+      "2023-06-09": 1195,
+      "2023-08-09": 1193,
+      "2024-03-31": 1188,
+      "2021-06-11": 1187,
+      "2024-08-24": 1184,
+      "2023-06-25": 1182,
+      "2022-01-12": 1181,
+      "2021-04-26": 1180,
+      "2023-02-21": 1179,
+      "2023-08-23": 1179,
+      "2024-03-27": 1178,
+      "2023-01-23": 1175,
+      "2024-11-22": 1175,
+      "2021-08-26": 1175,
+      "2021-07-20": 1174,
+      "2021-02-15": 1174,
+      "2020-09-11": 1172,
+      "2024-05-16": 1172
+    },
+    "Towing Date": {
+      "<NA>": 1714262,
+      "2020-06-19": 200,
+      "2020-06-01": 193,
+      "2022-12-19": 192,
+      "2022-08-26": 191,
+      "2020-05-27": 190,
+      "2023-01-08": 190,
+      "2024-03-03": 190,
+      "2024-12-05": 190,
+      "2022-05-10": 188,
+      "2020-01-25": 188,
+      "2021-04-10": 188,
+      "2024-07-08": 188,
+      "2024-07-26": 188,
+      "2022-07-25": 187,
+      "2021-12-10": 187,
+      "2022-09-21": 187,
+      "2023-04-09": 187,
+      "2021-04-19": 186,
+      "2024-03-18": 186
+    },
+    "Tow Location": {
+      "<NA>": 1714262,
+      "Residential": 48237,
+      "Dealer": 47583,
+      "Commercial": 47511,
+      "Highway": 47500,
+      "Parking Lot": 47480,
+      "Garage": 47427
+    },
+    "Drop-off Location": {
+      "<NA>": 1714262,
+      "Residential": 47859,
+      "Garage": 47798,
+      "Parking Lot": 47671,
+      "Commercial": 47572,
+      "Highway": 47508,
+      "Dealer": 47330
+    },
+    "Mechanic Name": {
+      "Mechanic 4": 100444,
+      "Mechanic 20": 100437,
+      "Mechanic 13": 100334,
+      "Mechanic 11": 100313,
+      "Mechanic 7": 100312,
+      "Mechanic 17": 100296,
+      "Mechanic 5": 100196,
+      "Mechanic 14": 100172,
+      "Mechanic 8": 100048,
+      "Mechanic 18": 100022,
+      "Mechanic 1": 100005,
+      "Mechanic 2": 99960,
+      "Mechanic 10": 99872,
+      "Mechanic 16": 99857,
+      "Mechanic 12": 99853,
+      "Mechanic 19": 99663,
+      "Mechanic 3": 99654,
+      "Mechanic 6": 99565,
+      "Mechanic 9": 99529,
+      "Mechanic 15": 99468
+    },
+    "Tow Truck Driver": {
+      "<NA>": 1714262,
+      "Driver 3": 20628,
+      "Driver 6": 20533,
+      "Driver 1": 20528,
+      "Driver 2": 20496,
+      "Driver 9": 20448,
+      "Driver 12": 20425,
+      "Driver 8": 20405,
+      "Driver 10": 20378,
+      "Driver 14": 20360,
+      "Driver 4": 20338,
+      "Driver 7": 20336,
+      "Driver 5": 20316,
+      "Driver 13": 20289,
+      "Driver 11": 20258
+    },
+    "Parts Used": {
+      "No parts used": 285738,
+      "Oil Filter, Synthetic Oil, Oil Drain Plug": 48100,
+      "Gearbox Seal, Clutch Kit, Transmission Fluid": 47942,
+      "Transmission Fluid, Clutch Kit, Gearbox Seal": 47842,
+      "Battery, Battery Terminal, Battery Holder": 47833,
+      "Battery Holder, Battery, Battery Terminal": 47785,
+      "Transmission Fluid, Gearbox Seal, Clutch Kit": 47782,
+      "Battery Terminal, Battery, Battery Holder": 47734,
+      "Oil Drain Plug, Synthetic Oil, Oil Filter": 47718,
+      "Oil Filter, Oil Drain Plug, Synthetic Oil": 47716,
+      "Oil Drain Plug, Oil Filter, Synthetic Oil": 47654,
+      "Battery, Battery Holder, Battery Terminal": 47598,
+      "Battery Terminal, Battery Holder, Battery": 47592,
+      "Synthetic Oil, Oil Filter, Oil Drain Plug": 47570,
+      "Synthetic Oil, Oil Drain Plug, Oil Filter": 47558,
+      "Gearbox Seal, Transmission Fluid, Clutch Kit": 47423,
+      "Battery Holder, Battery Terminal, Battery": 47381,
+      "Clutch Kit, Gearbox Seal, Transmission Fluid": 47374,
+      "Clutch Kit, Transmission Fluid, Gearbox Seal": 47329,
+      "Brake Fluid, Brake Pads, Rotors": 12124
+    },
+    "Payment Method": {
+      "Credit Card": 400448,
+      "Cash": 400246,
+      "Debit Card": 400125,
+      "Company Invoice": 399814,
+      "Insurance": 399367
+    },
+    "Warranty Information": {
+      "1 year on parts": 571621,
+      "90 days on labor": 286316,
+      "1 year on battery": 285923,
+      "6 months on new tire": 285837,
+      "No warranty offered": 285738,
+      "180 days on brake pads": 284565
+    },
+    "Service Status": {
+      "s": 1999999,
+      "In Progress": 1
+    },
+    "Follow-up Needed": {
+      "No": 1000083,
+      "Yes": 999917
+    },
+    "Urgency Level": {
+      "Standard": 667288,
+      "Scheduled": 666450,
+      "Emergency": 666262
+    },
+    "Customer Type": {
+      "Business": 667341,
+      "Fleet": 666794,
+      "Individual": 665865
+    },
+    "Insurance Claim Used": {
+      "No": 1143159,
+      "Yes": 856841
+    },
+    "Is Warranty Valid": {
+      "Yes": 1714262,
+      "No": 285738
+    }
+  },
+  "category_quality_flags": {
+    "Service Status": {
+      "rare_values": {
+        "In Progress": 1
+      },
+      "single_character_values": {
+        "s": 1999999
+      },
+      "case_whitespace_variants": []
+    }
+  },
+  "target_summaries": {
+    "Total Cost": {
+      "count": 2000000,
+      "missing": 0,
+      "minimum": 20.0,
+      "median": 198.77,
+      "maximum": 2797.06
+    },
+    "Service Type": {
+      "Oil Change": 286316,
+      "Engine Repair": 285929,
+      "Battery Replacement": 285923,
+      "Tire Replacement": 285837,
+      "Towing": 285738,
+      "Transmission Repair": 285692,
+      "Brake Service": 284565
+    }
+  },
+  "potential_outliers": {
+    "Total Cost": {
+      "count": 193706,
+      "lower_fence": -456.17499999999995,
+      "upper_fence": 1040.0249999999999
+    },
+    "Service Duration Hours": {
+      "count": 6951,
+      "lower_fence": -1.0,
+      "upper_fence": 7.0
+    },
+    "Estimated Cost": {
+      "count": 193089,
+      "lower_fence": -455.8550000000001,
+      "upper_fence": 1038.9850000000001
+    },
+    "Tow Distance Miles": {
+      "count": 285738,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    }
+  },
+  "plots_directory": "D:\\ML_Project\\plots\\production_v2\\eda\\repair_towing"
+}

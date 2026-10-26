@@ -1,0 +1,13 @@
+                     precision    recall  f1-score   support
+
+Battery Replacement       0.17      0.16      0.17     57185
+      Brake Service       0.17      0.13      0.14     56913
+      Engine Repair       0.17      0.17      0.17     57186
+         Oil Change       0.17      0.20      0.18     57263
+   Tire Replacement       0.16      0.17      0.17     57167
+             Towing       1.00      1.00      1.00     57148
+Transmission Repair       0.16      0.16      0.16     57138
+
+           accuracy                           0.29    400000
+          macro avg       0.29      0.29      0.28    400000
+       weighted avg       0.29      0.29      0.28    400000

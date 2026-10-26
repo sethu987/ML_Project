@@ -1,0 +1,120 @@
+{
+  "rows": 1139,
+  "columns": 24,
+  "numeric_columns": [
+    "slno",
+    "make_year",
+    "mileage_range",
+    "mileage",
+    "oil_filter",
+    "engine_oil",
+    "washer_plug_drain",
+    "dust_and_pollen_filter",
+    "whell_alignment_and_balancing",
+    "air_clean_filter",
+    "fuel_filter",
+    "spark_plug",
+    "brake_fluid",
+    "brake_and_clutch_oil",
+    "transmission_fluid",
+    "brake_pads",
+    "clutch",
+    "coolant",
+    "cost"
+  ],
+  "categorical_columns": [
+    "vehicle_type",
+    "brand",
+    "model",
+    "engine_type",
+    "region"
+  ],
+  "exact_duplicate_rows": 0,
+  "missing_values": {},
+  "categorical_values": {
+    "vehicle_type": {
+      "car": 1139
+    },
+    "brand": {
+      "honda": 979,
+      "toyota": 160
+    },
+    "model": {
+      "jazz": 342,
+      "amaze": 321,
+      "city": 316,
+      "fortuner": 160
+    },
+    "engine_type": {
+      "diesel": 659,
+      "petrol": 480
+    },
+    "region": {
+      "mumbai": 659,
+      "chennai": 480
+    }
+  },
+  "category_quality_flags": {},
+  "target_summaries": {
+    "cost": {
+      "count": 1139,
+      "missing": 0,
+      "minimum": 1099.0,
+      "median": 5199.0,
+      "maximum": 14000.0
+    }
+  },
+  "potential_outliers": {
+    "mileage": {
+      "count": 18,
+      "lower_fence": -23599.5,
+      "upper_fence": 112204.5
+    },
+    "washer_plug_drain": {
+      "count": 135,
+      "lower_fence": 1.0,
+      "upper_fence": 1.0
+    },
+    "spark_plug": {
+      "count": 72,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "brake_fluid": {
+      "count": 173,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "brake_and_clutch_oil": {
+      "count": 153,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "transmission_fluid": {
+      "count": 162,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "brake_pads": {
+      "count": 161,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "clutch": {
+      "count": 151,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "coolant": {
+      "count": 63,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "cost": {
+      "count": 13,
+      "lower_fence": -679.75,
+      "upper_fence": 10942.25
+    }
+  },
+  "plots_directory": "D:\\ML_Project\\plots\\production_v2\\eda\\vehicle_service"
+}

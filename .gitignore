@@ -1,0 +1,7 @@
+.env
+autocare.sqlite3
+autocare.sqlite3-shm
+autocare.sqlite3-wal
+__pycache__/
+*.py[cod]
+.venv/

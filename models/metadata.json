@@ -1,0 +1,585 @@
+{
+  "vehicle_service_cost": {
+    "model_name": "vehicle_service_cost",
+    "selected_estimator": "RandomForest",
+    "model_type": "RandomForestRegressor",
+    "source_dataset": "Vehicle Maintenance- Service Records.csv",
+    "target_column": "cost",
+    "cost_units": "Source dataset units; currency is not stated in the CSV.",
+    "input_features": [
+      "vehicle_type",
+      "brand",
+      "model",
+      "engine_type",
+      "make_year",
+      "region",
+      "mileage_range",
+      "mileage",
+      "oil_filter",
+      "engine_oil",
+      "washer_plug_drain",
+      "dust_and_pollen_filter",
+      "whell_alignment_and_balancing",
+      "air_clean_filter",
+      "fuel_filter",
+      "spark_plug",
+      "brake_fluid",
+      "brake_and_clutch_oil",
+      "transmission_fluid",
+      "brake_pads",
+      "clutch",
+      "coolant"
+    ],
+    "numeric_features": [
+      "make_year",
+      "mileage_range",
+      "mileage",
+      "oil_filter",
+      "engine_oil",
+      "washer_plug_drain",
+      "dust_and_pollen_filter",
+      "whell_alignment_and_balancing",
+      "air_clean_filter",
+      "fuel_filter",
+      "spark_plug",
+      "brake_fluid",
+      "brake_and_clutch_oil",
+      "transmission_fluid",
+      "brake_pads",
+      "clutch",
+      "coolant"
+    ],
+    "categorical_features": [
+      "vehicle_type",
+      "brand",
+      "model",
+      "engine_type",
+      "region"
+    ],
+    "excluded_features": [
+      "slno"
+    ],
+    "training_samples": 911,
+    "testing_samples": 228,
+    "usable_samples": 1139,
+    "random_seed": 42,
+    "training_date_utc": "2026-10-26T11:56:42.633844+00:00",
+    "selected_hyperparameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 16,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 80,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cross_validation": {
+      "DecisionTree": {
+        "scoring": "neg_mean_absolute_error",
+        "folds": 3,
+        "rows_used": 911,
+        "training_data_only": true,
+        "fold_scores": [
+          -382.5139254385965,
+          -322.6395285087719,
+          -431.394970925664
+        ],
+        "mean_score": -378.8494749576775,
+        "standard_deviation": 44.47476971511536
+      },
+      "RandomForest": {
+        "scoring": "neg_mean_absolute_error",
+        "folds": 3,
+        "rows_used": 911,
+        "training_data_only": true,
+        "fold_scores": [
+          -340.3460535615245,
+          -312.28009036216906,
+          -379.8988351135938
+        ],
+        "mean_score": -344.17499301242907,
+        "standard_deviation": 27.737690884770288
+      }
+    },
+    "test_metrics_by_model": {
+      "DecisionTree": {
+        "mae": 401.47715643274864,
+        "mse": 711978.7550248078,
+        "rmse": 843.7883354401196,
+        "r2": 0.8562026709339493
+      },
+      "RandomForest": {
+        "mae": 370.5415119552974,
+        "mse": 527763.0012667179,
+        "rmse": 726.4729872932082,
+        "r2": 0.8934084627856733
+      }
+    },
+    "selected_test_metrics": {
+      "mae": 370.5415119552974,
+      "mse": 527763.0012667179,
+      "rmse": 726.4729872932082,
+      "r2": 0.8934084627856733
+    },
+    "classification_report": null,
+    "classification_reports_by_model": {},
+    "class_names": null,
+    "limitations": [
+      "Cost currency is not identified in the source CSV; metrics retain source numeric units.",
+      "Random holdout can share vehicle or customer characteristics across train and test.",
+      "Tree feature importance measures model reliance and does not establish causation.",
+      "Repair/towing Service Status values are overwhelmingly 's', with one 'In Progress' row; confirm source encoding before deployment."
+    ],
+    "split_note": null,
+    "exact_duplicate_rows_kept": 0,
+    "supported_vehicle_combinations": [
+      [
+        "honda",
+        "jazz",
+        "petrol"
+      ],
+      [
+        "honda",
+        "jazz",
+        "diesel"
+      ],
+      [
+        "toyota",
+        "fortuner",
+        "diesel"
+      ],
+      [
+        "honda",
+        "amaze",
+        "diesel"
+      ],
+      [
+        "honda",
+        "city",
+        "petrol"
+      ],
+      [
+        "honda",
+        "amaze",
+        "petrol"
+      ],
+      [
+        "honda",
+        "city",
+        "diesel"
+      ]
+    ],
+    "feature_selection_notes": "Use the vehicle, engine, mileage, region, and planned service-item fields mapped from the existing AutoCare request. Exclude slno because it is a record identifier."
+  },
+  "repair_cost": {
+    "model_name": "repair_cost",
+    "selected_estimator": "RandomForest",
+    "model_type": "RandomForestRegressor",
+    "source_dataset": "enhanced_motor_vehicle_repair_towing_dataset.csv",
+    "target_column": "Total Cost",
+    "cost_units": "Source dataset units; currency is not stated in the CSV.",
+    "input_features": [
+      "Vehicle Type",
+      "Make and Model",
+      "Service Type",
+      "Urgency Level",
+      "Customer Type",
+      "Insurance Claim Used",
+      "Is Warranty Valid",
+      "Mileage at Service"
+    ],
+    "numeric_features": [
+      "Mileage at Service"
+    ],
+    "categorical_features": [
+      "Vehicle Type",
+      "Make and Model",
+      "Service Type",
+      "Urgency Level",
+      "Customer Type",
+      "Insurance Claim Used",
+      "Is Warranty Valid"
+    ],
+    "excluded_features": [
+      "Service ID",
+      "Customer Name",
+      "Service Description",
+      "Repair Date",
+      "Towing Date",
+      "Tow Location",
+      "Drop-off Location",
+      "Mechanic Name",
+      "Tow Truck Driver",
+      "Parts Used",
+      "Payment Method",
+      "Warranty Information",
+      "Service Status",
+      "Customer Feedback",
+      "Follow-up Needed",
+      "Service Duration Hours",
+      "Estimated Cost",
+      "Technician Rating",
+      "Tow Distance Miles"
+    ],
+    "training_samples": 1600000,
+    "testing_samples": 400000,
+    "usable_samples": 2000000,
+    "random_seed": 42,
+    "training_date_utc": "2026-10-26T12:07:12.768843+00:00",
+    "selected_hyperparameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 16,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 80,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cross_validation": {
+      "DecisionTree": {
+        "scoring": "neg_mean_absolute_error",
+        "folds": 3,
+        "rows_used": 100000,
+        "training_data_only": true,
+        "fold_scores": [
+          -91.51317024022364,
+          -91.13531974795417,
+          -92.57537595351697
+        ],
+        "mean_score": -91.7412886472316,
+        "standard_deviation": 0.609627741334477
+      },
+      "RandomForest": {
+        "scoring": "neg_mean_absolute_error",
+        "folds": 3,
+        "rows_used": 100000,
+        "training_data_only": true,
+        "fold_scores": [
+          -89.96412024821127,
+          -89.83546899519828,
+          -91.12549765325856
+        ],
+        "mean_score": -90.30836229888938,
+        "standard_deviation": 0.5801841240764286
+      }
+    },
+    "test_metrics_by_model": {
+      "DecisionTree": {
+        "mae": 89.94146957592748,
+        "mse": 25534.666098901263,
+        "rmse": 159.79570112772515,
+        "r2": 0.8462437453267582
+      },
+      "RandomForest": {
+        "mae": 89.68208197534665,
+        "mse": 25334.200469961223,
+        "rmse": 159.16720915427658,
+        "r2": 0.8474508433235423
+      }
+    },
+    "selected_test_metrics": {
+      "mae": 89.68208197534665,
+      "mse": 25334.200469961223,
+      "rmse": 159.16720915427658,
+      "r2": 0.8474508433235423
+    },
+    "classification_report": null,
+    "classification_reports_by_model": {},
+    "class_names": null,
+    "limitations": [
+      "Cost currency is not identified in the source CSV; metrics retain source numeric units.",
+      "Random holdout can share vehicle or customer characteristics across train and test.",
+      "Tree feature importance measures model reliance and does not establish causation.",
+      "Repair/towing Service Status values are overwhelmingly 's', with one 'In Progress' row; confirm source encoding before deployment."
+    ],
+    "split_note": null,
+    "exact_duplicate_rows_kept": 0,
+    "supported_vehicle_combinations": [],
+    "feature_selection_notes": "Use vehicle, service type, urgency, customer/insurance/warranty context, and mileage available at request time. Exclude Service ID and names as identifiers, Estimated Cost as a target proxy, and duration, rating, feedback, status, parts, payment, and other fields that describe or follow completed work."
+  },
+  "maintenance_category": {
+    "model_name": "maintenance_category",
+    "selected_estimator": "RandomForest",
+    "model_type": "RandomForestClassifier",
+    "source_dataset": "enhanced_motor_vehicle_repair_towing_dataset.csv",
+    "target_column": "Service Type",
+    "cost_units": null,
+    "input_features": [
+      "Vehicle Type",
+      "Make and Model",
+      "Urgency Level",
+      "Customer Type",
+      "Insurance Claim Used",
+      "Is Warranty Valid",
+      "Mileage at Service"
+    ],
+    "numeric_features": [
+      "Mileage at Service"
+    ],
+    "categorical_features": [
+      "Vehicle Type",
+      "Make and Model",
+      "Urgency Level",
+      "Customer Type",
+      "Insurance Claim Used",
+      "Is Warranty Valid"
+    ],
+    "excluded_features": [
+      "Service ID",
+      "Customer Name",
+      "Service Description",
+      "Repair Date",
+      "Towing Date",
+      "Tow Location",
+      "Drop-off Location",
+      "Mechanic Name",
+      "Tow Truck Driver",
+      "Parts Used",
+      "Total Cost",
+      "Payment Method",
+      "Warranty Information",
+      "Service Status",
+      "Customer Feedback",
+      "Follow-up Needed",
+      "Service Duration Hours",
+      "Estimated Cost",
+      "Technician Rating",
+      "Tow Distance Miles"
+    ],
+    "training_samples": 1600000,
+    "testing_samples": 400000,
+    "usable_samples": 2000000,
+    "random_seed": 42,
+    "training_date_utc": "2026-10-26T12:10:00.547870+00:00",
+    "selected_hyperparameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 16,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 80,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "cross_validation": {
+      "DecisionTree": {
+        "scoring": "f1_macro",
+        "folds": 3,
+        "rows_used": 100000,
+        "training_data_only": true,
+        "fold_scores": [
+          0.19620246355333326,
+          0.22511420316149108,
+          0.25479786069449534
+        ],
+        "mean_score": 0.22537150913643988,
+        "standard_deviation": 0.023922162615535474
+      },
+      "RandomForest": {
+        "scoring": "f1_macro",
+        "folds": 3,
+        "rows_used": 100000,
+        "training_data_only": true,
+        "fold_scores": [
+          0.284414286874935,
+          0.28346949449857745,
+          0.2837053588990121
+        ],
+        "mean_score": 0.28386304675750823,
+        "standard_deviation": 0.00040150322052974344
+      }
+    },
+    "test_metrics_by_model": {
+      "DecisionTree": {
+        "accuracy": 0.2857625,
+        "precision_macro": 0.2839244952192686,
+        "recall_macro": 0.28560714408691873,
+        "macro_f1": 0.23583869635648452,
+        "weighted_f1": 0.23593782427951815
+      },
+      "RandomForest": {
+        "accuracy": 0.28523,
+        "precision_macro": 0.28515350868860373,
+        "recall_macro": 0.28518499261522434,
+        "macro_f1": 0.28453718005716006,
+        "weighted_f1": 0.2845663932716358
+      }
+    },
+    "selected_test_metrics": {
+      "accuracy": 0.28523,
+      "precision_macro": 0.28515350868860373,
+      "recall_macro": 0.28518499261522434,
+      "macro_f1": 0.28453718005716006,
+      "weighted_f1": 0.2845663932716358
+    },
+    "classification_report": "                     precision    recall  f1-score   support\n\nBattery Replacement       0.17      0.16      0.17     57185\n      Brake Service       0.17      0.13      0.14     56913\n      Engine Repair       0.17      0.17      0.17     57186\n         Oil Change       0.17      0.20      0.18     57263\n   Tire Replacement       0.16      0.17      0.17     57167\n             Towing       1.00      1.00      1.00     57148\nTransmission Repair       0.16      0.16      0.16     57138\n\n           accuracy                           0.29    400000\n          macro avg       0.29      0.29      0.28    400000\n       weighted avg       0.29      0.29      0.28    400000\n",
+    "classification_reports_by_model": {
+      "DecisionTree": {
+        "Battery Replacement": {
+          "precision": 0.16361707769822328,
+          "recall": 0.010789542712249715,
+          "f1-score": 0.02024411050593871,
+          "support": 57185.0
+        },
+        "Brake Service": {
+          "precision": 0.16410510659395142,
+          "recall": 0.011631788870732521,
+          "f1-score": 0.02172379280358344,
+          "support": 56913.0
+        },
+        "Engine Repair": {
+          "precision": 0.1657133331745767,
+          "recall": 0.6084356310985206,
+          "f1-score": 0.2604818997495798,
+          "support": 57186.0
+        },
+        "Oil Change": {
+          "precision": 0.16836710978897462,
+          "recall": 0.2530255138571154,
+          "f1-score": 0.20219231225448125,
+          "support": 57263.0
+        },
+        "Tire Replacement": {
+          "precision": 0.16999118360149879,
+          "recall": 0.10792939982857243,
+          "f1-score": 0.13203085713062923,
+          "support": 57167.0
+        },
+        "Towing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 57148.0
+        },
+        "Transmission Repair": {
+          "precision": 0.15567765567765568,
+          "recall": 0.007438132241240505,
+          "f1-score": 0.01419790205117926,
+          "support": 57138.0
+        },
+        "accuracy": 0.2857625,
+        "macro avg": {
+          "precision": 0.2839244952192686,
+          "recall": 0.28560714408691873,
+          "f1-score": 0.23583869635648452,
+          "support": 400000.0
+        },
+        "weighted avg": {
+          "precision": 0.2839371022039466,
+          "recall": 0.2857625,
+          "f1-score": 0.23593782427951815,
+          "support": 400000.0
+        }
+      },
+      "RandomForest": {
+        "Battery Replacement": {
+          "precision": 0.1669197106367777,
+          "recall": 0.16341697997726676,
+          "f1-score": 0.16514977467526729,
+          "support": 57185.0
+        },
+        "Brake Service": {
+          "precision": 0.16606729734063266,
+          "recall": 0.12738741588037883,
+          "f1-score": 0.1441781843492095,
+          "support": 56913.0
+        },
+        "Engine Repair": {
+          "precision": 0.1663839603758863,
+          "recall": 0.17152799636274613,
+          "f1-score": 0.16891682452212847,
+          "support": 57186.0
+        },
+        "Oil Change": {
+          "precision": 0.16870921534298902,
+          "recall": 0.20362188498681522,
+          "f1-score": 0.18452870798252832,
+          "support": 57263.0
+        },
+        "Tire Replacement": {
+          "precision": 0.16341366261700857,
+          "recall": 0.17223223188202985,
+          "f1-score": 0.1677071002137644,
+          "support": 57167.0
+        },
+        "Towing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 57148.0
+        },
+        "Transmission Repair": {
+          "precision": 0.16458071450693193,
+          "recall": 0.15810843921733347,
+          "f1-score": 0.16127966865722268,
+          "support": 57138.0
+        },
+        "accuracy": 0.28523,
+        "macro avg": {
+          "precision": 0.28515350868860373,
+          "recall": 0.28518499261522434,
+          "f1-score": 0.28453718005716006,
+          "support": 400000.0
+        },
+        "weighted avg": {
+          "precision": 0.2851650060471905,
+          "recall": 0.28523,
+          "f1-score": 0.2845663932716358,
+          "support": 400000.0
+        }
+      }
+    },
+    "class_names": [
+      "Battery Replacement",
+      "Brake Service",
+      "Engine Repair",
+      "Oil Change",
+      "Tire Replacement",
+      "Towing",
+      "Transmission Repair"
+    ],
+    "limitations": [
+      "Cost currency is not identified in the source CSV; metrics retain source numeric units.",
+      "Random holdout can share vehicle or customer characteristics across train and test.",
+      "Tree feature importance measures model reliance and does not establish causation.",
+      "Repair/towing Service Status values are overwhelmingly 's', with one 'In Progress' row; confirm source encoding before deployment."
+    ],
+    "split_note": null,
+    "exact_duplicate_rows_kept": 0,
+    "supported_vehicle_combinations": [],
+    "feature_selection_notes": "Exclude Service Type because it is the classification target. Use request-time vehicle, urgency, customer/insurance/warranty context, and mileage; exclude record identifiers, cost fields, and post-service descriptions, parts, status, duration, ratings, and feedback."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "model_name": "vehicle_service_cost",
+  "selected_estimator": "RandomForest",
+  "cross_validation": {
+    "DecisionTree": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 911,
+      "training_data_only": true,
+      "fold_scores": [
+        -382.5139254385965,
+        -322.6395285087719,
+        -431.394970925664
+      ],
+      "mean_score": -378.8494749576775,
+      "standard_deviation": 44.47476971511536
+    },
+    "RandomForest": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 911,
+      "training_data_only": true,
+      "fold_scores": [
+        -340.3460535615245,
+        -312.28009036216906,
+        -379.8988351135938
+      ],
+      "mean_score": -344.17499301242907,
+      "standard_deviation": 27.737690884770288
+    }
+  },
+  "test_metrics_by_model": {
+    "DecisionTree": {
+      "mae": 401.47715643274864,
+      "mse": 711978.7550248078,
+      "rmse": 843.7883354401196,
+      "r2": 0.8562026709339493
+    },
+    "RandomForest": {
+      "mae": 370.5415119552974,
+      "mse": 527763.0012667179,
+      "rmse": 726.4729872932082,
+      "r2": 0.8934084627856733
+    }
+  },
+  "selected_test_metrics": {
+    "mae": 370.5415119552974,
+    "mse": 527763.0012667179,
+    "rmse": 726.4729872932082,
+    "r2": 0.8934084627856733
+  },
+  "classification_report": null,
+  "classification_reports_by_model": {}
+}

@@ -1,0 +1,54 @@
+{
+  "model_name": "repair_cost",
+  "selected_estimator": "RandomForest",
+  "cross_validation": {
+    "DecisionTree": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 100000,
+      "training_data_only": true,
+      "fold_scores": [
+        -91.51317024022364,
+        -91.13531974795417,
+        -92.57537595351697
+      ],
+      "mean_score": -91.7412886472316,
+      "standard_deviation": 0.609627741334477
+    },
+    "RandomForest": {
+      "scoring": "neg_mean_absolute_error",
+      "folds": 3,
+      "rows_used": 100000,
+      "training_data_only": true,
+      "fold_scores": [
+        -89.96412024821127,
+        -89.83546899519828,
+        -91.12549765325856
+      ],
+      "mean_score": -90.30836229888938,
+      "standard_deviation": 0.5801841240764286
+    }
+  },
+  "test_metrics_by_model": {
+    "DecisionTree": {
+      "mae": 89.94146957592748,
+      "mse": 25534.666098901263,
+      "rmse": 159.79570112772515,
+      "r2": 0.8462437453267582
+    },
+    "RandomForest": {
+      "mae": 89.68208197534665,
+      "mse": 25334.200469961223,
+      "rmse": 159.16720915427658,
+      "r2": 0.8474508433235423
+    }
+  },
+  "selected_test_metrics": {
+    "mae": 89.68208197534665,
+    "mse": 25334.200469961223,
+    "rmse": 159.16720915427658,
+    "r2": 0.8474508433235423
+  },
+  "classification_report": null,
+  "classification_reports_by_model": {}
+}
