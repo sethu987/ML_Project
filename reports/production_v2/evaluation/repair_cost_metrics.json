@@ -5,28 +5,28 @@
     "DecisionTree": {
       "scoring": "neg_mean_absolute_error",
       "folds": 3,
-      "rows_used": 25000,
+      "rows_used": 100000,
       "training_data_only": true,
       "fold_scores": [
-        -90.1900305920357,
-        -91.51768921816961,
-        -94.27740929110585
+        -91.51317024022364,
+        -91.13531974795417,
+        -92.57537595351697
       ],
-      "mean_score": -91.99504303377039,
-      "standard_deviation": 1.7024621692036859
+      "mean_score": -91.7412886472316,
+      "standard_deviation": 0.609627741334477
     },
     "RandomForest": {
       "scoring": "neg_mean_absolute_error",
       "folds": 3,
-      "rows_used": 25000,
+      "rows_used": 100000,
       "training_data_only": true,
       "fold_scores": [
-        -88.07395110691027,
-        -89.07341684367218,
-        -90.60262733236033
+        -89.96412024821127,
+        -89.83546899519828,
+        -91.12549765325856
       ],
-      "mean_score": -89.2499984276476,
-      "standard_deviation": 1.0398514814268864
+      "mean_score": -90.30836229888938,
+      "standard_deviation": 0.5801841240764286
     }
   },
   "test_metrics_by_model": {
